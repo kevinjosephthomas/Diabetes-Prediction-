@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Prediction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button[type="submit"] {
+            padding: 12px 20px;
+            background: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background: #218838;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        .result {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetes Prediction</h1>
+        <form method="POST">
+            <label for="glucose">Glucose:</label>
+            <input type="number" name="glucose" id="glucose" value="0">
+
+            <label for="blood_pressure">Blood Pressure:</label>
+            <input type="number" name="blood_pressure" id="blood_pressure" value="0">
+
+            <label for="skin_thickness">Skin Thickness:</label>
+            <input type="number" name="skin_thickness" id="skin_thickness" value="0">
+
+            <label for="insulin">Insulin:</label>
+            <input type="number" name="insulin" id="insulin" value="0">
+
+            <label for="bmi">BMI:</label>
+            <input type="number" name="bmi" id="bmi" value="0">
+
+            <label for="diabetes_pedigree_function">Diabetes Pedigree Function:</label>
+            <input type="number" name="diabetes_pedigree_function" id="diabetes_pedigree_function" value="0">
+
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age" value="0">
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <h2>Prediction Result:</h2>
+        <p class="result">{{ prediction_result }}</p>
+
+        <h2>Logistic Regression Plot</h2>
+        {% if logistic_regression_plot_img %}
+            <img src="{{ logistic_regression_plot_img }}" alt="Logistic Regression Plot">
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Analysis</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetes Analysis</h1>
+        <div class="button-group">
+            <a href="/prediction">Prediction</a>
+            <a href="/cleaned_dataset">Cleaned Dataset</a>
+            <a href="/t-test">T-Test</a>
+            <a href="/factor_analysis">Factor Analysis</a>
+            <a href="/kmeans">KMeans Clustering</a>
+            <a href="/pca">PCA</a>
+            <a href="/hierarchical">Hierarchical Clustering</a>
+        </div>
+    </div>
+</body>
+</html>
